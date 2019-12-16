@@ -11,9 +11,9 @@ namespace InternetStore
         static private string Tipe { get; } = "Board game";
         private string NumberOfPlayers { get; set; }
         private int PlayingTime { get; set; }
-        private string Age { get; set; }
+        private int Age { get; set; }
 
-        public BoardGame(string title, string author, int price, int rating, string numberOfPlayers, int playingTime, string age) : base(title, author, price, rating)
+        public BoardGame(string title, string author, int price, int rating, string numberOfPlayers, int playingTime, int age) : base(title, author, price, rating)
         {
             NumberOfPlayers = numberOfPlayers;
             PlayingTime = playingTime;
@@ -30,7 +30,7 @@ namespace InternetStore
                 $"price: {Price}, " +
                 $"number of players: {NumberOfPlayers}, " +
                 $"playing time: {PlayingTime}, " +
-                $"age: {Age}.");
+                $"age: {Age}+.");
         }
     }
 }
