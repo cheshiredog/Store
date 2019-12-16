@@ -13,7 +13,7 @@ namespace InternetStore
         private int PlayingTime { get; set; }
         private string Age { get; set; }
 
-        public BoardGame(string title, string autor, int price, int rating, string numberOfPlayers, int playingTime, string age) : base(title, autor, price, rating)
+        public BoardGame(string title, string author, int price, int rating, string numberOfPlayers, int playingTime, string age) : base(title, author, price, rating)
         {
             NumberOfPlayers = numberOfPlayers;
             PlayingTime = playingTime;
@@ -25,7 +25,7 @@ namespace InternetStore
             Console.WriteLine(
                 $"Tipe: {Tipe}, " +
                 $"title: {Title}, " +
-                $"autor: {Autor}, " +
+                $"author: {Author}, " +
                 $"rating: {Rating}, " +
                 $"price: {Price}, " +
                 $"number of players: {NumberOfPlayers}, " +

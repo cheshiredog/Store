@@ -12,7 +12,7 @@ namespace InternetStore
         private int Pages { get; set; }
         private string Genre { get; set; }
 
-        public Book(string title, string autor, int price, int rating, int pages, string genre) : base(title, autor, price, rating)
+        public Book(string title, string author, int price, int rating, int pages, string genre) : base(title, author, price, rating)
         {
             Pages = pages;
             Genre = genre;
@@ -23,7 +23,7 @@ namespace InternetStore
             Console.WriteLine(
                 $"Tipe: {Tipe}, " +
                 $"title: {Title}, " +
-                $"autor: {Autor}, " +
+                $"author: {Author}, " +
                 $"rating: {Rating}, " +
                 $"price: {Price}, " +
                 $"pages: {Pages}, " +

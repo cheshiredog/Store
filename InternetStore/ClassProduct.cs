@@ -9,14 +9,14 @@ namespace InternetStore
     class Product
     {
         protected string Title { get; set; }
-        protected string Autor { get; set; }
+        protected string Author { get; set; }
         protected int Price { get; set; } = 0;
         protected int Rating { get; set; } = 0;
 
         public Product(string title, string autor, int price, int rating)
         {
             Title = title;
-            Autor = autor;
+            Author = autor;
             Price = price;
             Rating = rating;
         }
@@ -25,7 +25,7 @@ namespace InternetStore
         {
             Console.WriteLine(
                 $"Product: {Title}, " +
-                $"autor: {Autor}, " +
+                $"author: {Author}, " +
                 $"rating: {Rating}, " +
                 $"price: {Price}.");
         }
