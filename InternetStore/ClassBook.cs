@@ -8,7 +8,7 @@ namespace InternetStore
 {
     class Book : Product
     {
-        static private string Tipe { get; } = "Book";
+        static private string Tipe { get; } = "book";
         private int Pages { get; set; }
         private string Genre { get; set; }
 
@@ -18,7 +18,7 @@ namespace InternetStore
             Genre = genre;
         }
 
-        public void GetBookInfo()
+        public override void GetInfo()
         {
             Console.WriteLine(
                 $"Tipe: {Tipe}, " +

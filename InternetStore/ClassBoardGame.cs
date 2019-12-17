@@ -8,7 +8,7 @@ namespace InternetStore
 {
     class BoardGame : Product
     {
-        static private string Tipe { get; } = "Board game";
+        static private string Tipe { get; } = "board game";
         private string NumberOfPlayers { get; set; }
         private int PlayingTime { get; set; }
         private int Age { get; set; }
@@ -20,7 +20,7 @@ namespace InternetStore
             Age = age;
         }
 
-        public void GetBoardGameInfo()
+        public override void GetInfo()
         {
             Console.WriteLine(
                 $"Tipe: {Tipe}, " +

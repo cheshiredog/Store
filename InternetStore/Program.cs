@@ -163,16 +163,16 @@ namespace InternetStore
                 case "1": // add book
                     int pages = AskPages();
                     string genre = AskGenre();
-                    Book newBook = NewBook(title, author, price, rating, pages, genre);
-                    newBook.GetBookInfo();
+                    Product newBook = NewBook(title, author, price, rating, pages, genre);
+                    newBook.GetInfo();
                     break;
 
                 case "2": // add board game
                     string numberOfPlayers = AskNumberOfPlayers();
                     int playingTime = AskPlayingTime();
                     int age = AskAge();
-                    BoardGame newBoardGame = NewBoardGame(title, author, price, rating, numberOfPlayers, playingTime, age);
-                    newBoardGame.GetBoardGameInfo();
+                    Product newBoardGame = NewBoardGame(title, author, price, rating, numberOfPlayers, playingTime, age);
+                    newBoardGame.GetInfo();
                     break;
 
                 default:
@@ -180,16 +180,16 @@ namespace InternetStore
             }
         }
 
-        static Book NewBook(string title, string author, int price, int rating, int pages, string genre)
+        static Product NewBook(string title, string author, int price, int rating, int pages, string genre)
         {
-            Book newBook = new Book(title, author, price, rating, pages, genre);
+            Product newBook = new Book(title, author, price, rating, pages, genre);
 
             return newBook;
         }
 
-        static BoardGame NewBoardGame(string title, string author, int price, int rating, string numberOfplayers, int playingTime, int age)
+        static Product NewBoardGame(string title, string author, int price, int rating, string numberOfplayers, int playingTime, int age)
         {
-            BoardGame newBoardGame = new BoardGame(title, author, price, rating, numberOfplayers, playingTime, age);
+            Product newBoardGame = new BoardGame(title, author, price, rating, numberOfplayers, playingTime, age);
 
             return newBoardGame;
         }

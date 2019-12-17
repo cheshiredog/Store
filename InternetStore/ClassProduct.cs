@@ -21,7 +21,7 @@ namespace InternetStore
             Rating = rating;
         }
 
-        public void GetProductInfo()
+        public virtual void GetInfo()
         {
             Console.WriteLine(
                 $"Product: {Title}, " +
