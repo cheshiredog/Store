@@ -19,34 +19,7 @@ namespace InternetStore
             }
         }
 
-        static void AddNewProduct(string userAnswer)
-        {
-            string title = AskTitle();
-            string author = AskAuthor();
-            int price = AskPrice();
-            int rating = AskRating();
-
-            switch (userAnswer)
-            {
-                case "1": // add book
-                    int pages = AskPages();
-                    string genre = AskGenre();
-                    Book newBook = NewBook(title, author, price, rating, pages, genre);
-                    newBook.GetBookInfo();
-                    break;
-
-                case "2": // add board game
-                    string numberOfPlayers = AskNumberOfPlayers();
-                    int playingTime = AskPlayingTime();
-                    int age = AskAge();
-                    BoardGame newBoardGame = NewBoardGame(title, author, price, rating, numberOfPlayers, playingTime, age);
-                    newBoardGame.GetBoardGameInfo();
-                    break;
-
-                default:
-                    break;
-            }
-        }
+        #region Get data from user
 
         static string AskTitle()
         {
@@ -174,6 +147,39 @@ namespace InternetStore
             return age;
         }
 
+        #endregion
+
+        #region Create new object
+
+        static void AddNewProduct(string userAnswer)
+        {
+            string title = AskTitle();
+            string author = AskAuthor();
+            int price = AskPrice();
+            int rating = AskRating();
+
+            switch (userAnswer)
+            {
+                case "1": // add book
+                    int pages = AskPages();
+                    string genre = AskGenre();
+                    Book newBook = NewBook(title, author, price, rating, pages, genre);
+                    newBook.GetBookInfo();
+                    break;
+
+                case "2": // add board game
+                    string numberOfPlayers = AskNumberOfPlayers();
+                    int playingTime = AskPlayingTime();
+                    int age = AskAge();
+                    BoardGame newBoardGame = NewBoardGame(title, author, price, rating, numberOfPlayers, playingTime, age);
+                    newBoardGame.GetBoardGameInfo();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
         static Book NewBook(string title, string author, int price, int rating, int pages, string genre)
         {
             Book newBook = new Book(title, author, price, rating, pages, genre);
@@ -187,5 +193,7 @@ namespace InternetStore
 
             return newBoardGame;
         }
+
+        #endregion
     }
 }
